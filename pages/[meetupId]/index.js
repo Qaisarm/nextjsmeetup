@@ -14,7 +14,7 @@ function MeetupDetails(props){
 }
 export async function getStaticPaths(){
     const client = await MongoClient.connect(
-            "mongodb://qmphy:123Landau2@ac-fy6gdop-shard-00-00.lubgau9.mongodb.net:27017,ac-fy6gdop-shard-00-01.lubgau9.mongodb.net:27017,ac-fy6gdop-shard-00-02.lubgau9.mongodb.net:27017/?ssl=true&replicaSet=atlas-vwcbfm-shard-0&authSource=admin&retryWrites=true&w=majority"
+            "mongodb://admin:wmzrnxfaoiuQq3fB@ac-hcoylfa-shard-00-00.yjkxbcc.mongodb.net:27017,ac-hcoylfa-shard-00-01.yjkxbcc.mongodb.net:27017,ac-hcoylfa-shard-00-02.yjkxbcc.mongodb.net:27017/?ssl=true&replicaSet=atlas-zz8vzk-shard-0&authSource=admin&retryWrites=true&w=majority"
           );
         
           const db = client.db();
@@ -35,8 +35,8 @@ export async function getStaticProps(context){
     const meetupId = context.params.meetupId;
     
     const client = await MongoClient.connect(
-        "mongodb://qmphy:123Landau2@ac-fy6gdop-shard-00-00.lubgau9.mongodb.net:27017,ac-fy6gdop-shard-00-01.lubgau9.mongodb.net:27017,ac-fy6gdop-shard-00-02.lubgau9.mongodb.net:27017/?ssl=true&replicaSet=atlas-vwcbfm-shard-0&authSource=admin&retryWrites=true&w=majority"
-      );
+      "mongodb://admin:wmzrnxfaoiuQq3fB@ac-hcoylfa-shard-00-00.yjkxbcc.mongodb.net:27017,ac-hcoylfa-shard-00-01.yjkxbcc.mongodb.net:27017,ac-hcoylfa-shard-00-02.yjkxbcc.mongodb.net:27017/?ssl=true&replicaSet=atlas-zz8vzk-shard-0&authSource=admin&retryWrites=true&w=majority"
+    );
     
       const db = client.db();
       const meetupsCollection = db.collection("meetups");
